@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Navbar extends Component {
+  logout(e) {
+    this.props.logout();
+    e.preventDefault();
+  }
+
   render() {
     return (
       <nav className="navbar">
@@ -28,7 +33,7 @@ class Navbar extends Component {
               <button type="submit" className="btn btn-default">Submit</button>
             </form>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
+              <li><a onClick={(e) => this.logout(e)}>Logout</a></li>
             </ul>
           </div>
         </div>
