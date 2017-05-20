@@ -1,38 +1,6 @@
 import React, { Component } from 'react';
-import ExecutionEnvironment from 'exenv';
 
 class Navbar extends Component {
-
-  componentDidMount() {
-    if (ExecutionEnvironment.canUseDOM) {
-      window.addEventListener('scroll', this.handleScroll, false);
-    }
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  getInitialState() {
-    return {
-      hidden: true
-    };
-  }
-
-  handleScroll() {
-    // Navbar is 60px in height. Could also get height of DOM node here using
-    // findDOMNode(this.refs.navRef) and subtract that.
-    var heightToShow = window.innerHeight - 60;
-
-    if (window.pageYOffset > heightToShow) {
-      this.setState({ hidden: false });
-    }
-
-    if (window.pageYOffset < heightToShow) {
-      this.setState({ hidden: true });
-    }
-  }
-
   render() {
     return (
       <nav className="navbar">
