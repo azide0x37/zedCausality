@@ -1,9 +1,11 @@
 {
   "name": "zedcausality",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
+    "exenv": "^1.2.2",
     "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
